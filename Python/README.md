@@ -2,18 +2,22 @@
 Some python scripts to monitor your machine
 
 # Prerequisites before running the script :
+
 - Install python 3
 - Install psutil
-```
-sudo apt-get -y install python3-pip
-pip3 install psutil
-````
+
+  ```shell
+  sudo apt-get -y install python3-pip
+  pip3 install psutil
+  ````
 
 # Disk monitoring
+
 - Indicates the different partitions and their file system of your machine 
 - Indicates the total, used, and free disk space of each partition
 
-***Output Example:***
+**Output Example:**
+
 ```
 ---------------------------------------------------------------------------------
 Partition C:\ (rw,fixed) | systeme de fichier : NTFS
@@ -28,7 +32,7 @@ Total = 499.0M | Utilisé = 452.9M | Libre = 46.1M | Pourcentage= 90.8% utilisé
 - Indicates the total, used, datetime creation and free memory usage
 - Indicates top 5 process that use the most memory
 
-***Output Example:***
+**Output Example:**
 ```
 ----------------------------------MEMORY STATS----------------------------------
 Total=11.9G | Utilisé=5.0G | Libre=6.9G | Pourcentage= 42.1% utilisé
@@ -41,10 +45,12 @@ Total=11.9G | Utilisé=5.0G | Libre=6.9G | Pourcentage= 42.1% utilisé
 ```
 
 # CPU monitoring
+
 - Indicates percent cpu used of each logical processor
 - Indicates top 5 process that use the most cpu
 
-***Output Example:***
+**Output Example:**
+
 ```
 ----------------------------------------CPU STATS----------------------------------------
 Nombre de Processeur logique : 4 
@@ -63,9 +69,11 @@ Processeur logique n°4 : 1.6%
 ```
 
 # Networking monitoring
+
 - Indicates in realtime Bytes receive/sent and your networking speed
 
 ***Output Example:***
+
 ```
 bytes_sent = 43.2M | bytes_recv = 1.4G | Speed = 128B/s
 ```

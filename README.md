@@ -1,2 +1,3 @@
 # Monitoring
-<img src="monitoring.png">
+
+![monitoring](monitoring.png)

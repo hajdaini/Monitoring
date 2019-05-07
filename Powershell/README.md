@@ -1,12 +1,11 @@
 # Monitoring-powershell
+
 Some powershell scripts to monitor your machine
 
 
 # How tu use it 
 
-First in your windows machine put the script in this folder "C:\Program Files\NSClient++\scripts"
-
-and in your "C:\Program Files\NSClient++\nsclient.ini" add those lines :
+First in your windows machine put the script in this folder ***"C:\Program Files\NSClient++\scripts"*** and in your ***"C:\Program Files\NSClient++\nsclient.ini"*** add those lines :
 
 ```
 CheckExternalScripts = enabled
@@ -17,12 +16,14 @@ mps = cmd /c echo scripts\memory_cpu_processus_check.ps1 $ARG1$ $ARG2$ $ARG3$; e
 # memory_cpu_processus_check.ps1
 
 In your centreon/Nagios server :
+
 ```
 cd /usr/lib/nagios/plugins
 ./check_nrpe -H YOUR_IP -c mps -a YOUR_IP_AGAIN 98 99
 ```
 
-***Output Example:***
+**Output Example:**
+
 ```
 OK: Memory is 68 % used, CPU % is 1 and CPU Queue is  |'Memory'=68% 'CPU'=1%
 ----CPU---- ':
@@ -41,12 +42,16 @@ _____
 ```
 
 # folder_size.ps1
+
 In your centreon/Nagios server :
-```
+
+```shell
 cd /usr/lib/nagios/plugins
 ./check_nrpe -H YOUR_IP -c folder_size -a "your_folder_path"
 ```
-***Output Example:***
+
+**Output Example:**
+
 ```
 Espace utilise 23,66 GB |'used'=23.66GB
 ```
